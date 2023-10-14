@@ -8,5 +8,5 @@ class Square:
 
 """create an empty class"""
 
-my_square = Square """initiate """
-print(type(my_square))"""print square type"""
+my_square = Square  # initiate
+print(type(my_square))  # print square type
