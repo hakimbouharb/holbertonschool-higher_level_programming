@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"A module that defines a class named MyList"
+""" module my list"""
 
 
 class MyList(list):
-    """A class named MyList
-    Attributes:
-    attr1(print_sorted): prints sorted list
-    """
+    """ create a list """
     def print_sorted(self):
-        """Prints instance"""
-        print(sorted(self))
+        """ prit list sorted without change the original"""
+        tmp = sorted(self)
+        print(tmp)
