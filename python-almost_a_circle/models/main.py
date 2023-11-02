@@ -2,6 +2,4 @@
 """ 1-main """
 from models.rectangle import Rectangle
 
-if __name__ == "__main__":
-
-
+if __name__ == 
