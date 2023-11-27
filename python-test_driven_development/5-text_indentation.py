@@ -1,18 +1,18 @@
 #!/usr/bin/python3
+"""a function that prints a text with 2 new lines
+after each of these characters: ., ? and :"""
+
+
 def text_indentation(text):
-    """
-    Format the input text by adding 2 newlines after (:?.)
-    Args:
-        text (str): The input text to be formatted.
-    Raises:
-        TypeError: If the 'text' argument is not a string.
-    """
+    """" print text with 2lines in case of finding .?: in
+    the text or an error msg in case of error"""
     if not isinstance(text, str):
-        raise TypeError(
-            "text must be a string"
-        )
-    for char in ".?:":
-        text = text.replace(char, char + "\n\n")
-    line_without_spaces = [lines.strip(' ') for lines in text.split('\n')]
-    formatted_text = "\n".join(line_without_spaces)
-    print(formatted_text, end="")
+        raise TypeError("text must be a string")
+    else:
+        res = ""
+        for i in range(len(text)):
+            if text[i] == '.' or text[i] == '?' or text[i] == ':':
+                res += text[i] + "\n\n"
+            else:
+                res += text[i]
+        print(res, end="")
