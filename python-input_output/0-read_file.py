@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""
-module write to a file
-"""
+"""Write a function that reads a text file (UTF8)
+and prints it to stdout"""
 
 
-def write_file(filename="", text=""):
-    """"
-    a function tha writes a string to a text file
-    and returrns the number of characters
-    """
-    with open(filename, 'w') as fd:
-        return (fd.write(text))
+def read_file(filename=""):
+    """this is the function """
+    with open(filename, "r", encoding="utf-8") as f:
+        read_data = f.read()
+        print(read_data, end="")
